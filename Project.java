@@ -38,6 +38,7 @@ public class Project { public static String encrypt(String input) {
         }
 
         // 将每个字符的ASCII码减去它在字符串中的位置(1开始)和偏移值3
+        //利用for循环
         for (int i = 0; i < decrypted.length(); i++) {
             char c = (char) (decrypted.charAt(i) - i - 1 - 3);
             decrypted.setCharAt(i, c);
@@ -47,6 +48,7 @@ public class Project { public static String encrypt(String input) {
     }
 
     public static void main(String[] args) {
+    //输出
         String input = "Hello World!";
         String encrypted = encrypt(input);
         System.out.println("Encrypted: " + encrypted);
